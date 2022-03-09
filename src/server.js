@@ -30,6 +30,7 @@ async function handler(req, res) {
   }
 
   if (method === requestMethod.DELETE) {
+    Database.clear();
     return respondJSON({ ok: 1 }, res);
   }
 }
